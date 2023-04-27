@@ -1,0 +1,58 @@
+@import 'styles/media-query';
+
+.marvelSocialChannelsMain {
+  display: grid;
+  grid-template-rows: 15px auto;
+  row-gap: 20px;
+
+  label {
+    color: var(--application-primary-text-color);
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  .socialChannelContainer {
+    display: grid;
+    grid-auto-columns: fit-content(0px);
+    grid-auto-flow: column;
+    column-gap: 10px;
+  }
+
+  .socialChannelControl {
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      .socialChannelIcon {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+
+  .socialChannelIcon {
+    width: 30px;
+    height: 30px;
+
+    path {
+      fill: #767676
+    }
+  }
+
+}
+
+@include medium-screen {
+
+  .marvelSocialChannelsMain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    label {
+      font-size: 18px;
+    }
+  }
+
+}

@@ -1,0 +1,93 @@
+@import 'styles/media-query';
+
+.footerMarvelInsiderMain {
+  display: grid;
+  gap: 15px;
+  font-family: 'Roboto-Regular';
+
+  .marvelFeatureItemContainer {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .marvelFeatureImageContainer {
+    width: 100px;
+
+    .marvelFeatureItemImage {
+      width: 100%;
+    }
+  }
+
+  .marvelFeatureItemContent {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 3px;
+
+    label {
+      font-size: 15px;
+      color: var(--application-primary-text-color);
+      text-transform: uppercase;
+      letter-spacing: 0.4;
+      cursor: pointer;
+    }
+
+    span {
+      color: var(--application-tertiary-color);
+      font-size: 14px;
+    }
+  }
+
+}
+
+@include medium-screen {
+
+  .footerMarvelInsiderMain {
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+
+    .marvelFeatureItemContent {
+      label {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+}
+
+@include mini-screen {
+
+  .footerMarvelInsiderMain {
+    grid-template-columns: auto;
+    gap: 15px;
+
+    .marvelFeatureItemContainer {
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+    }
+
+    .marvelFeatureImageContainer {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .marvelFeatureItemContent {
+      label {
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+}

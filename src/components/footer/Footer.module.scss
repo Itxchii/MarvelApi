@@ -1,0 +1,33 @@
+@import 'styles/media-query';
+
+.footerMain {
+  background-color: var(--application-secondary-color);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  column-gap: 10px;
+  align-items: center;
+}
+
+@include medium-screen {
+
+  .footerMain {
+    grid-template-columns: auto;
+    column-gap: 20px;
+    grid-auto-rows: min-content;
+    row-gap: 30px;
+
+    .logoContainer {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 150px;
+    }
+
+  }
+
+}

@@ -1,0 +1,36 @@
+@import 'styles/media-query';
+
+.footerExternalControlsMain {
+  display: grid;
+  grid-auto-rows: 15px;
+  row-gap: 15px;
+
+  .footerExternalControl {
+    color: var(--application-primary-text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+    width: fit-content;
+    transition: color var(--application-transition-duration) var(--application-transition-function);
+
+    &:hover {
+      color: var(--application-primary-color);
+    }
+  }
+}
+
+@include medium-screen {
+
+  .footerExternalControlsMain {
+    grid-auto-rows: 18px;
+    justify-content: center;
+
+    .footerExternalControl {
+      font-size: 18px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+}

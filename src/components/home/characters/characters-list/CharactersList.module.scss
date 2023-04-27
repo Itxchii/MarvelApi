@@ -1,0 +1,33 @@
+@import 'styles/media-query';
+
+#charactersListMain {
+  display: grid;
+  grid-auto-columns: calc(20% - 8px);
+  grid-auto-flow: column;
+  column-gap: 10px;
+  align-items: center;
+}
+
+@include medium-screen {
+
+  #charactersListMain {
+    grid-template-columns: calc(33.33% - 8px) calc(33.33% - 8px) calc(33.33% - 8px);
+    grid-auto-flow: unset;
+    justify-content: center;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+  }
+
+}
+
+@include small-screen {
+
+  #charactersListMain {
+    grid-template-columns: auto;
+    grid-auto-flow: unset;
+    justify-content: center;
+    grid-auto-rows: max-content;
+    row-gap: 10px;
+  }
+
+}
